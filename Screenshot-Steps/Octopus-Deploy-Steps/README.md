@@ -2,8 +2,7 @@
 
 The project has been exported with the Octopus CLI via JSON. 
 
-```octo export --server=http://octopusdeploy/api --apiKey=ABCDEF123456 --type=project --name=ProjectName --filePath=C:\path\to\export\file.json
-```
+```octo export --server=http://octopusdeploy/api --apiKey=ABCDEF123456 --type=project --name=ProjectName --filePath=C:\path\to\export\file.json```
 
 The JSON output that you can import is found in Octopus-Deploy-Steps/project-export.json
 
@@ -29,5 +28,4 @@ Azure Portal --> Azure Function that you want to deploy to --> Deployment Center
 
 You can then use the username and password found in the FTP section.
 
-![images/5.png]
-
+![](images/5.png)

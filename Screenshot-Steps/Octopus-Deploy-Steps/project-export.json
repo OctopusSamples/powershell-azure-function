@@ -1,0 +1,279 @@
+{
+    "Project": {
+      "Id": "Projects-41",
+      "VariableSetId": "variableset-Projects-41",
+      "DeploymentProcessId": "deploymentprocess-Projects-41",
+      "ClonedFromProjectId": null,
+      "DiscreteChannelRelease": false,
+      "IncludedLibraryVariableSetIds": [],
+      "DefaultToSkipIfAlreadyInstalled": false,
+      "TenantedDeploymentMode": "Untenanted",
+      "DefaultGuidedFailureMode": "EnvironmentDefault",
+      "VersioningStrategy": {
+        "Template": "#{Octopus.Version.LastMajor}.#{Octopus.Version.LastMinor}.#{Octopus.Version.NextPatch}",
+        "DonorPackage": null,
+        "DonorPackageStepId": null
+      },
+      "ReleaseCreationStrategy": {
+        "ReleaseCreationPackage": null,
+        "ChannelId": null,
+        "ReleaseCreationPackageStepId": null
+      },
+      "Templates": [],
+      "AutoDeployReleaseOverrides": [],
+      "ReleaseNotesTemplate": null,
+      "DeploymentChangesTemplate": null,
+      "SpaceId": "Spaces-1",
+      "ExtensionSettings": [],
+      "Name": "Azure-Function-Apps",
+      "Slug": "azure-function-apps",
+      "Description": "",
+      "IsDisabled": false,
+      "ProjectGroupId": "ProjectGroups-1",
+      "LifecycleId": "Lifecycles-1",
+      "AutoCreateRelease": false,
+      "IsVersionControlled": false,
+      "VersionControlSettings": {
+        "Url": null,
+        "Username": null,
+        "Password": null,
+        "DefaultBranch": null
+      },
+      "ProjectConnectivityPolicy": {
+        "SkipMachineBehavior": "None",
+        "TargetRoles": [],
+        "AllowDeploymentsToNoTargets": false,
+        "ExcludeUnhealthyTargets": false
+      },
+      "Links": {
+        "Self": "/api/Spaces-1/projects/Projects-41",
+        "Releases": "/api/Spaces-1/projects/Projects-41/releases{/version}{?skip,take,searchByVersion}",
+        "Channels": "/api/Spaces-1/projects/Projects-41/channels{?skip,take,partialName}",
+        "Triggers": "/api/Spaces-1/projects/Projects-41/triggers{?skip,take,partialName,triggerActionType,triggerActionCategory,runbooks}",
+        "ScheduledTriggers": "/api/Spaces-1/projects/Projects-41/scheduledtriggers{?skip,take,partialName}",
+        "OrderChannels": "/api/Spaces-1/projects/Projects-41/channels/order",
+        "Variables": "/api/Spaces-1/variables/variableset-Projects-41",
+        "Progression": "/api/Spaces-1/progression/Projects-41{?aggregate}",
+        "RunbookTaskRunDashboardItemsTemplate": "/api/Spaces-1/progression/runbooks/taskRuns{?skip,take,ids,projectIds,runbookIds,environmentIds,tenantIds,taskIds}",
+        "DeploymentProcess": "/api/Spaces-1/deploymentprocesses/deploymentprocess-Projects-41",
+        "Web": "/app#/Spaces-1/projects/Projects-41",
+        "Logo": "/api/Spaces-1/projects/Projects-41/logo?cb=2020.3.1",
+        "Metadata": "/api/Spaces-1/projects/Projects-41/metadata",
+        "Runbooks": "/api/Spaces-1/projects/Projects-41/runbooks{?skip,take}",
+        "RunbookSnapshots": "/api/Spaces-1/projects/Projects-41/runbookSnapshots{/name}{?skip,take,searchByName}",
+        "VersionControlSettingsConnectionTest": "/api/Spaces-1/projects/Projects-41/versioncontrolsettings/test",
+        "Summary": "/api/Spaces-1/projects/Projects-41/summary"
+      }
+    },
+    "ProjectGroup": {
+      "Id": "ProjectGroups-1",
+      "Name": "Default Project Group"
+    },
+    "VariableSet": {
+      "Id": "variableset-Projects-41",
+      "OwnerId": "Projects-41",
+      "Version": 4,
+      "Variables": [
+        {
+          "Id": "1b11d31f-f13a-fcbb-e93e-a5e14fde254f",
+          "Name": "functionAppName",
+          "Value": "powershellcore92",
+          "Description": null,
+          "Type": "String",
+          "Scope": {},
+          "IsEditable": true,
+          "Prompt": null,
+          "IsSensitive": false
+        },
+        {
+          "Id": "ac1a9bdc-cea9-c490-cf50-7ce2629bd307",
+          "Name": "userName",
+          "Value": "powershellcore92\\$powershellcore92",
+          "Description": null,
+          "Type": "String",
+          "Scope": {},
+          "IsEditable": true,
+          "Prompt": null,
+          "IsSensitive": false
+        },
+        {
+          "Id": "484775f2-dcaf-5bf7-cacc-9be9daacfa28",
+          "Name": "password",
+          "Value": null,
+          "Description": null,
+          "Type": "Sensitive",
+          "Scope": {},
+          "IsEditable": true,
+          "Prompt": null,
+          "IsSensitive": true
+        }
+      ],
+      "ScopeValues": {
+        "Environments": [
+          {
+            "Id": "Environments-1",
+            "Name": "Dev"
+          }
+        ],
+        "Machines": [
+          {
+            "Id": "Machines-41",
+            "Name": "Azure-Functions"
+          },
+          {
+            "Id": "Machines-22",
+            "Name": "terraformdeploy"
+          }
+        ],
+        "Actions": [
+          {
+            "Id": "cbc45d3e-1983-4655-a98d-85df845d5e9f",
+            "Name": "1. Deploy a Package"
+          }
+        ],
+        "Roles": [
+          {
+            "Id": "powershellfunction",
+            "Name": "powershellfunction"
+          },
+          {
+            "Id": "terraformdeploy",
+            "Name": "terraformdeploy"
+          }
+        ],
+        "Channels": [
+          {
+            "Id": "Channels-41",
+            "Name": "Default"
+          }
+        ],
+        "TenantTags": [],
+        "Processes": [
+          {
+            "ProcessType": "Deployment",
+            "Id": "Projects-41",
+            "Name": "Deployment Process"
+          }
+        ]
+      },
+      "SpaceId": "Spaces-1",
+      "Links": {
+        "Self": "/api/Spaces-1/variables/variableset-Projects-41"
+      }
+    },
+    "NuGetFeeds": [],
+    "ActionTemplates": [
+      {
+        "Id": "ActionTemplates-21",
+        "Name": "Azure Functions Deployment"
+      }
+    ],
+    "DeploymentProcess": {
+      "Id": "deploymentprocess-Projects-41",
+      "ProjectId": "Projects-41",
+      "Steps": [
+        {
+          "Id": "bc63564a-e97b-4fe6-91d3-1447eba4187d",
+          "Name": "Deploy a Package",
+          "RequiresPackagesToBeAcquired": false,
+          "PackageRequirement": "LetOctopusDecide",
+          "Properties": {
+            "Octopus.Action.TargetRoles": "powershellfunction"
+          },
+          "Condition": "Success",
+          "StartTrigger": "StartAfterPrevious",
+          "Actions": [
+            {
+              "Id": "cbc45d3e-1983-4655-a98d-85df845d5e9f",
+              "Name": "Deploy a Package",
+              "ActionType": "Octopus.TentaclePackage",
+              "IsDisabled": false,
+              "WorkerPoolId": null,
+              "WorkerPoolVariable": "",
+              "Container": {
+                "Image": null,
+                "FeedId": null
+              },
+              "CanBeUsedForProjectVersioning": true,
+              "IsRequired": false,
+              "Environments": [],
+              "ExcludedEnvironments": [],
+              "Channels": [],
+              "TenantTags": [],
+              "Properties": {
+                "Azf.Password": {
+                  "HasValue": true,
+                  "NewValue": null
+                },
+                "Octopus.Action.Package.AutomaticallyRunConfigurationTransformationFiles": "True",
+                "Octopus.Action.Package.AutomaticallyUpdateAppSettingsAndConnectionStrings": "True",
+                "Octopus.Action.EnabledFeatures": "Octopus.Features.CustomScripts,Octopus.Features.JsonConfigurationVariables,Octopus.Features.ConfigurationTransforms,Octopus.Features.ConfigurationVariables",
+                "Octopus.Action.Package.DownloadOnTentacle": "False",
+                "Octopus.Action.Package.FeedId": "feeds-builtin",
+                "Octopus.Action.Package.JsonConfigurationVariablesEnabled": "True",
+                "Octopus.Action.CustomScripts.PostDeploy.ps1": "$installationPath = $OctopusParameters[\"Octopus.Action.Package.InstallationDirectoryPath\"]\n$packageId = $OctopusParameters[\"Octopus.Action.Package.PackageId\"]\n$packageVersion = $OctopusParameters[\"Octopus.Action.Package.PackageVersion\"]\n\nWrite-Host \"Installation Path: $($installationPath)\"\nWrite-Host \"Package ID: $($packageId)\"\nWrite-Host \"Package Version: $($packageVersion)\"\n\n$zipFilePath = \"$($installationPath)\\$($packageId).$($packageVersion).zip\"\n\nWrite-Host \"Zip File Path: $($zipFilePath)\"\n\nCompress-Archive -Path \"$($installationPath)\\*\" -DestinationPath $zipFilePath\n\nWrite-Host \"Deployment zip file created\"\n\n$username = $OctopusParameters[\"Azf.Username\"]\n$password = $OctopusParameters[\"Azf.Password\"]\n$appName = $OctopusParameters[\"Azf.ApplicationName\"]\n\nif(!$username){\n    Write-Error \"No Username has been supplied. You can do this from the Step Details page of this step.\"\n    \n    exit 1;\n}\n\n\nif(!$password){\n    Write-Error \"No Password has been supplied. You can do this from the Step Details page of this step.\"\n    \n    exit 1;\n}\n\n\nif(!$appName){\n    Write-Error \"No Application Name has been supplied. You can do this from the Step Details page of this step.\"\n    \n    exit 1;\n}\n\n$authHeader = [Convert]::ToBase64String([Text.Encoding]::ASCII.GetBytes((\"{0}:{1}\" -f $username,$password)))\n\n$apiUrl = \"https://$($appName).scm.azurewebsites.net/api/zipdeploy\"\n\nWrite-Host \"Uploading deployment zip file to $($apiUrl)\"\n\n# Set secure protocols\n[System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls11 -bor [System.Net.SecurityProtocolType]::Tls12\n\nInvoke-RestMethod -Uri $apiUrl -Headers @{Authorization=(\"Basic {0}\" -f $authHeader)} -Method POST -InFile $zipFilePath -ContentType \"multipart/form-data\"\n\nWrite-Host \"Upload complete\"\n",
+                "Octopus.Action.Package.PackageId": "#{Azf.PackageName}",
+                "Octopus.Action.Package.JsonConfigurationVariablesTargets": "#{Azf.JsonConfigFiles}",
+                "Octopus.Action.Template.Id": "ActionTemplates-21",
+                "Octopus.Action.Template.Version": "4",
+                "Azf.ApplicationName": "$functionAppName",
+                "Azf.Username": "$userName",
+                "Azf.PackageName": "powershellazurefunction-1"
+              },
+              "Packages": [
+                {
+                  "Id": "2276b446-edd3-4e47-a438-5716fea1e720",
+                  "Name": "",
+                  "PackageId": "#{Azf.PackageName}",
+                  "FeedId": "feeds-builtin",
+                  "AcquisitionLocation": "Server",
+                  "Properties": {}
+                }
+              ],
+              "Condition": "Success",
+              "Links": {}
+            }
+          ]
+        }
+      ],
+      "Version": 4,
+      "LastSnapshotId": null,
+      "SpaceId": "Spaces-1",
+      "Links": {
+        "Self": "/api/Spaces-1/deploymentprocesses/deploymentprocess-Projects-41",
+        "Project": "/api/Spaces-1/projects/Projects-41",
+        "Template": "/api/Spaces-1/deploymentprocesses/deploymentprocess-Projects-41/template{?channel,releaseId}"
+      }
+    },
+    "LibraryVariableSets": [],
+    "Lifecycle": {
+      "Id": "Lifecycles-1",
+      "Name": "Default Lifecycle"
+    },
+    "Channels": [
+      {
+        "Id": "Channels-41",
+        "Name": "Default",
+        "Description": null,
+        "ProjectId": "Projects-41",
+        "LifecycleId": null,
+        "IsDefault": true,
+        "Rules": [],
+        "TenantTags": [],
+        "SpaceId": "Spaces-1",
+        "Links": {
+          "Self": "/api/Spaces-1/channels/Channels-41",
+          "Releases": "/api/Spaces-1/channels/Channels-41/releases{?skip,take,searchByVersion}",
+          "Project": "/api/Spaces-1/projects/Projects-41"
+        }
+      }
+    ],
+    "ChannelLifecycles": [],
+    "WorkerPools": [],
+    "$Meta": {
+      "ExportedAt": "2020-07-23T10:21:37.842-04:00",
+      "OctopusVersion": "2020.3.1",
+      "Type": "project",
+      "ContainerType": "ProjectWithDependencies"
+    }
+  }
